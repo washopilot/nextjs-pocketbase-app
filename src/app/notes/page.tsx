@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import CreateNote from './CreateNote'
 import styles from './Notes.module.css'
 
 const getNotes = async () => {
@@ -20,6 +21,8 @@ const NotesPage = async () => {
                     return <Note key={note.id} note={note} />
                 })}
             </div>
+
+            <CreateNote />
         </div>
     )
 }
